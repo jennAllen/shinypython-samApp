@@ -42,4 +42,14 @@ def server(input, output, session):
             print(l)
         return l
 
+    @render.text()
+    @reactive.event(input.log_button)
+    def logged():
+        l = input.logme()
+        if input.stderr():
+            print(l, file=sys.stderr)
+        else:
+            print(l)
+        return l
+
 app = App(app_ui, server)
