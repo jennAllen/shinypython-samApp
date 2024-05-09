@@ -13,6 +13,16 @@ app_ui = ui.page_fluid(
     ui.input_text_area("logme", "Text to log", placeholder="Enter text"),
     ui.input_checkbox("stderr", "log to stderr", False),
     ui.input_action_button("log_button", "Log"),
+    ui.input_action_button("log_button", "Log"),
+    ui.input_action_button("log_button", "Log"),
+    ui.input_action_button("log_button", "Log"),
+    ui.input_action_button("log_button", "Log"),
+    ui.input_action_button("log_button", "Log"),
+    ui.input_action_button("log_button", "Log"),
+    ui.input_action_button("log_button", "Log"),
+    ui.input_action_button("log_button", "Log"),
+    ui.input_action_button("log_button", "Log"),
+    
     ui.output_text_verbatim("logged"),
 )
 
@@ -42,14 +52,5 @@ def server(input, output, session):
             print(l)
         return l
 
-    @render.text()
-    @reactive.event(input.log_button)
-    def logged():
-        l = input.logme()
-        if input.stderr():
-            print(l, file=sys.stderr)
-        else:
-            print(l)
-        return l
 
 app = App(app_ui, server)
