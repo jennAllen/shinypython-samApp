@@ -13,15 +13,7 @@ app_ui = ui.page_fluid(
     ui.input_text_area("logme", "Text to log", placeholder="Enter text"),
     ui.input_checkbox("stderr", "log to stderr", False),
     ui.input_action_button("log_button", "Log"),
-    ui.input_action_button("log_button", "Log"),
-    ui.input_action_button("log_button", "Log"),
-    ui.input_action_button("log_button", "Log"),
-    ui.input_action_button("log_button", "Log"),
-    ui.input_action_button("log_button", "Log"),
-    ui.input_action_button("log_button", "Log"),
-    ui.input_action_button("log_button", "Log"),
-    ui.input_action_button("log_button", "Log"),
-    ui.input_action_button("log_button", "Log"),
+
     
     ui.output_text_verbatim("logged"),
 )
